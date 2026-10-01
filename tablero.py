@@ -12,6 +12,10 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Imagen debajo del título + texto
+st.image("gatodibujon.jpg", width=300)
+st.write("Ahora dibuja abajo 👇")
+
 with st.sidebar:
     st.subheader("Propiedades del Tablero")
 
@@ -26,7 +30,6 @@ with st.sidebar:
 
     stroke_width = st.slider("Selecciona el ancho de línea", 1, 30, 15)
 
-    # Fucsia por defecto (key nueva para evitar el valor guardado anterior)
     stroke_color = st.color_picker("Color de trazo", "#FF00FF", key="color_trazo_fucsia")
 
     bg_color = st.color_picker("Color de fondo", "#000000")
