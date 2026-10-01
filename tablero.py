@@ -1,7 +1,11 @@
 import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 
-st.title("Tablero para dibujo")
+# Título en color fucsia (st.title no admite color, por eso se usa HTML)
+st.markdown(
+    "<h1 style='color: #FF00FF;'>Tablero para dibujo</h1>",
+    unsafe_allow_html=True,
+)
 
 with st.sidebar:
     st.subheader("Propiedades del Tablero")
@@ -20,8 +24,8 @@ with st.sidebar:
     # Stroke width slider
     stroke_width = st.slider('Selecciona el ancho de línea', 1, 30, 15)
 
-    # Stroke color picker
-    stroke_color = st.color_picker("Color de trazo", "#FFFFFF")
+    # Stroke color picker (fucsia por defecto)
+    stroke_color = st.color_picker("Color de trazo", "#FF00FF")
 
     # Background color
     bg_color = st.color_picker("Color de fondo", "#000000")
